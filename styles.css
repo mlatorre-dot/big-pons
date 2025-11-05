@@ -1,34 +1,64 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f2f2f2;
-  color: #333;
+:root{
+  --yellow:#FFC107;
+  --black:#0f0f10;
+  --g800:#1c1c1f;
+  --white:#fff;
 }
+*{box-sizing:border-box}
+body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial}
+a{text-decoration:none;color:var(--yellow)}
+.container{width:min(1100px,92%);margin:auto}
+.section{padding:64px 0}
+.section--alt{background:var(--g800)}
+.section__title{font-family:Oswald;font-size:clamp(28px,3vw,40px);margin:0 0 24px}
 
-header {
-  background: #004aad;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
+/* Header */
+.site-header{position:sticky;top:0;background:#111;padding:10px 0;border-bottom:1px solid #222}
+.header-wrap{display:flex;justify-content:space-between;align-items:center}
+.brand__logo{height:40px}
+.nav__list{list-style:none;display:flex;gap:16px;margin:0;padding:0}
+.nav__toggle{display:none;background:none;border:0;color:var(--white);font-size:24px}
 
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  display: grid;
-  gap: 1rem;
-}
+/* Hero */
+.hero{position:relative;text-align:center;min-height:70vh;display:grid;place-items:center}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;filter:brightness(0.6)}
+.hero__title{font-family:Oswald;font-size:clamp(48px,10vw,90px);margin:0}
+.hero__tag{margin:10px 0 20px;color:#eee}
+.hero__cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:10px 20px;border-radius:999px;font-weight:600;border:2px solid transparent}
+.btn--primary{background:var(--yellow);color:#111}
+.btn--ghost{border-color:var(--yellow);color:var(--yellow);background:transparent}
 
-.card {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+/* About */
+.about__grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.about__img img{width:100%;border-radius:10px}
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #555;
+/* Menú */
+.menu__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:#151517;border-radius:10px;overflow:hidden}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card__body{padding:14px}
+.card__title{font-family:Oswald;font-size:1.3rem;margin:0 0 6px}
+.card__desc{font-size:.95rem;margin:0;color:#ddd}
+
+/* Sucursales */
+.stores__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.store{background:#151517;border-radius:10px;overflow:hidden}
+.store img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.store__body{padding:12px}
+.store h3{font-family:Oswald;margin:0 0 4px}
+
+/* Redes */
+.feed__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.feed__grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+
+/* Footer */
+.site-footer{text-align:center;padding:20px 0;border-top:1px solid #222;margin-top:20px;font-size:.9rem;color:#ccc}
+
+/* Responsive */
+@media (max-width:768px){
+  .about__grid{grid-template-columns:1fr}
+  .nav__toggle{display:block}
+  .nav__list{display:none;flex-direction:column;position:absolute;top:60px;right:5%;background:#111;padding:12px;border-radius:8px}
+  .nav__list.is-open{display:flex}
 }

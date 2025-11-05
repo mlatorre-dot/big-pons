@@ -1,42 +1,137 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Big Pons</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BIG PONS – American Classic Burgers</title>
+  <meta name="description" content="Big Pons: American Classic Burgers. Menú, sucursales y novedades." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>BIG PONS</h1>
-    <p>American Classic Burgers</p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="#inicio">
+        <img class="brand__logo" src="assets/logo-bigpons.png" alt="BIG PONS">
+      </a>
+      <nav class="nav">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul id="menu" class="nav__list">
+          <li><a href="#quienes">Quiénes somos</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#sucursales">Sucursales</a></li>
+          <li><a href="#redes">Redes</a></li>
+          <li><a class="btn btn--primary" href="#menu">Hacé tu pedido</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <div class="card">
-      <h2>Quiénes Somos</h2>
-      <p>Nacimos en 2017 con la idea de llevar la hamburguesa a otro nivel. Hoy somos una cadena con locales en todo el país.</p>
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <img src="assets/hero.jpg" alt="Hamburguesa Big Pons">
+    <div class="hero__content container">
+      <h1 class="hero__title">BIG PONS</h1>
+      <p class="hero__tag">American Classic Burgers</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#menu">Ver menú</a>
+        <a class="btn btn--ghost" href="#sucursales">Ver sucursales</a>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h2>Menú</h2>
-      <ul>
-        <li>Big Cheval</li>
-        <li>Sweet Onion</li>
-        <li>Meatfree</li>
-        <li>Pesto</li>
-        <li>Grilled</li>
-      </ul>
+  <!-- Quiénes somos -->
+  <section id="quienes" class="section section--alt">
+    <div class="container about__grid">
+      <div class="about__img">
+        <img src="assets/about.jpg" alt="Detalle burger Big Pons">
+      </div>
+      <div class="about__content">
+        <h2 class="section__title">Quiénes Somos</h2>
+        <p>Nacimos en 2017 con la idea de llevar la hamburguesa a otro nivel.</p>
+        <p>Lo que empezó en un club de barrio se transformó en una cadena con locales en todo el país.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h2>Sucursales</h2>
-      <p>San Isidro, Pilar, Corrientes, Puerto Madero, Boedo, Nordelta.</p>
+  <!-- Menú -->
+  <section id="menu" class="section">
+    <div class="container">
+      <h2 class="section__title">Nuestra Carta</h2>
+      <div class="menu__grid">
+        <article class="card">
+          <img src="assets/menu-meatfree.jpg" alt="Meatfree">
+          <div class="card__body">
+            <h3 class="card__title">Meatfree</h3>
+            <p class="card__desc">Medallón veggie, cheddar, pickles y salsa de la casa.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/menu-bigcheval.jpg" alt="Big Cheval">
+          <div class="card__body">
+            <h3 class="card__title">Big Cheval</h3>
+            <p class="card__desc">Triple queso, pepinillos y aderezo especial.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/menu-pesto.jpg" alt="Pesto">
+          <div class="card__body">
+            <h3 class="card__title">Pesto</h3>
+            <p class="card__desc">Carne, mozzarella, tomate y pesto casero.</p>
+          </div>
+        </article>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    <p>© 2025 Big Pons. Todos los derechos reservados.</p>
+  <!-- Sucursales -->
+  <section id="sucursales" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Sucursales</h2>
+      <div class="stores__grid">
+        <article class="store">
+          <img src="assets/store-san-isidro.jpg" alt="San Isidro">
+          <div class="store__body"><h3>San Isidro</h3><p>Av. del Libertador 14850</p></div>
+        </article>
+        <article class="store">
+          <img src="assets/store-pilar.jpg" alt="Pilar">
+          <div class="store__body"><h3>Pilar</h3><p>Caamaño 682</p></div>
+        </article>
+        <article class="store">
+          <img src="assets/store-corrientes.jpg" alt="Corrientes">
+          <div class="store__body"><h3>Corrientes</h3><p>Av. Corrientes 1743</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redes -->
+  <section id="redes" class="section">
+    <div class="container">
+      <h2 class="section__title">En Redes</h2>
+      <div class="feed__grid">
+        <img src="assets/feed-1.jpg" alt="Post 1">
+        <img src="assets/feed-2.jpg" alt="Post 2">
+        <img src="assets/feed-3.jpg" alt="Post 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Big Pons. Todos los derechos reservados.</p>
+    </div>
   </footer>
+
+  <script>
+    const t = document.querySelector('.nav__toggle');
+    const m = document.getElementById('menu');
+    t.addEventListener('click', () => {
+      m.classList.toggle('is-open');
+    });
+  </script>
 </body>
 </html>
